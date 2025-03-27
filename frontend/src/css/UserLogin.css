@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 375px;
+    height: 667px;
+    overflow: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.email,
+.password {
+    background-color: #0000000f;
+    border-radius: 7px;
+    padding: 8px 10px;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.Login-page h3 {
+    font-size: larger;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.Login-page img {
+    height: 10%;
+    width: 17%;
+}
+
+.Login-page button {
+    background-color: #000000;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.Login-page p {
+    margin-top: 10px;
+}
+
+.Login-page p a {
+    color: rgba(0, 0, 255, 0.514);
+    text-decoration: none;
+}
+
+.captain {
+    padding: 0px 30px;
+    width: 100%;
+    margin-top: 10px;
+    /* Add margin-top to match the spacing */
+}
+
+.captain a {
+    display: block;
+    /* Make the anchor element a block-level element */
+    background-color: #e2430a9f;
+    border: 1px solid;
+    text-decoration: none;
+    border-radius: 3px;
+    width: 100%;
+    padding: 8px 10px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    /* Center the text */
+}
+
+.page2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.login-as-user {
+    background-color: green;
+    text-decoration: none;
+    padding: 8px 10px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.name1 {
+    background-color: #0000000f;
+    border-radius: 7px;
+    padding: 8px 10px;
+    border: none;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.name {
+    display: flex;
+    gap: 10px;
+}
+
+.policy p {
+    font-size: small;
+    color: #0000009c;
+}
+
+.policy {
+    margin-top: 10px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.policy p span {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.vehicle-info {
+    background-color: #f9f9f9;
+    border-radius: 7px;
+    padding: 20px 0px;
+    margin-top: 20px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.vehicle-info h4 {
+    font-size: medium;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.vehicle-info p {
+    font-size: small;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.vehicle-info .vehicle-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.vdata{
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #0000000f;
+    border: none;
+}
+ .home_logo{
+    width: 15%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+ }
+ .home_map12 img{
+   height: 100%;
+    width: 100%;
+ }
+    .home_map12{
+        width: 100%;
+        height: 100vh;
+       
+    }
+.location_container{
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+   width: 100%;
+   background-color: white;
+   padding:  30px;
+   align-items: center;
+   height: 30%;
+}
+
+.trip_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  
+}
+.trip_form input{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0000001c;
+    border: none;
+    width: 100%;
+}   
+.location_container h4{
+    font-size: medium;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+}
+.suggestions{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+}
+.select_suggestion{
+    height: 70%;
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    display: none;
+}
+
+.Location_panel{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    overflow: hidden;
+}
+.near-location{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background-color: #0000000f;
+    border-radius: 5px;
+    display: block;
+    
+    
+}
+.near-location:hover{ 
+    border: 2px solid black;
+}
+
+.locations{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.near-location i{
+    font-size: 14px;
+    border-radius: 5px;
+}
+.near-location h4{
+    font-size: medium;
+    font-weight: 500;
+    display: inline-block;
+    margin-left: 10px;
+}
+.near-location h2{
+    display: inline-block;
+
+}
+.ride-options{
+    position: absolute;
+    height:70vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 20px;
+
+    transform: translateY(70vh);
+  
+}
+.vehi-options{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d1d100;
+    margin: 15px 0px;
+    border-radius: 10px;
+  
+    border: 2px solid rgba(0, 0, 0, 0.192);
+    
+}
+.ride-options div img{
+    height: 40px;
+    width: 50px;
+}
+.rider-info {
+    flex-direction: column;
+    padding: 0px 20px;
+     /* Ensure the parent container has a defined height */
+    
+}
+.rider-info h4{
+    font-size: small;
+}
+.rider-info h5{
+    font-weight: 400;
+    color: #0000009c;
+    background: none;
+}
+.rider-info  p{
+    font-size: small;
+    font-weight: 400;
+}
+.ride-options div h2{
+    font-size: medium;
+    font-weight: 400 ;
+}
+.ride-options h2{
+    font-size: x-large;
+   
+    margin-bottom: 10px;
+}
+.vehi-options:hover{
+    border-color: black;
+}
+
+.small_ride_option{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirmation_container{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.confirmation-img img{
+    height: 80px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top:10px ;
+}
+.confirmation_container h2{
+    font-size: large;
+    margin-top: 10px;
+    color: #000000cc;
+    border-bottom: 1px solid black;
+}
+.confirmations{
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    transform: translateY(70vh);
+    
+}
+.confirmation-img{
+    display: flex ;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+}
+.confirm-data{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+   padding: 10px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.363);
+   
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.confirmation-data2{
+    width: 70%;
+    height: 100%;
+    border-left: 2px solid rgba(0, 0, 0, 0.086);
+    padding-left: 20px;
+}
+.confirmation-data2 h3{
+    font-size: medium;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 20px;
+
+}
+.confirmation-data2 p{
+    color: #00000054;
+}
+.confirmation-img button{
+    background-color: rgba(0, 128, 0, 0.708);
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+.confirmation-info{
+    width: 100%;
+}
+.confirmation-forWaiting{
+    position: absolute;
+    z-index: 100;
+    height: 70vh;
+    width: 100%;
+    background-color: white;
+    transform: translateY(70vh);
+    
+}

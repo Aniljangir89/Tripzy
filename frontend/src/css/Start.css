@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.text{
+    color: rgb(12, 112, 151);
+}
+.page1{
+  height: 100vh;
+  width:100vw;
+  background-color: rgb(148, 106, 106);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: url(https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_1380,w_1104/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png);
+  background-size: cover;
+}
+.page1-content{
+   background-color: white;
+   padding: 25px 10px;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page1 img{
+    width: 20%;
+    height: 15%;
+    margin: 0px 15px;
+}
+.page1-content h1{
+    font-weight: bold;
+
+}
+.page1-content a{
+    background-color: black;
+    color: white;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-top: 10px;
+    text-decoration: none;
+}
