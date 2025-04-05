@@ -13,21 +13,19 @@ const LookingForDriver = (props) => {
         <div className="confirm-data">
         <i class="ri-map-pin-time-fill"></i>
           <div className="confirmation-data2">
-            <h3>565/A11</h3>
-            <p>1'st Flor bombay street</p>
+            <p>{props.pickup}</p>
           </div>
         </div>
         <div className="confirm-data">
         <i class="ri-landscape-line"></i>
         <div className="confirmation-data2">
-            <h3>565/A11</h3>
-            <p>Sadar bazar,jaipur</p>
+            <p>{props.destination}</p>
           </div>
         </div>
         <div className="confirm-data">
         <i class="ri-bank-card-2-fill"></i>
         <div className="confirmation-data2">
-            <h3>$19.79</h3>
+        <h3>{parseInt(props.fare)}</h3>
             <p>Cash/Online</p>
           </div>
         </div>

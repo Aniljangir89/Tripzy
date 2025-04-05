@@ -1,43 +1,43 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from '../pages/home'; // Import the Home component
-import Start from "../pages/Start"; // Import the Start component
-import UserLogin from "../pages/UserLogin"; // Import the UserLogin component
-import UserSignup from "../pages/UserSignup"; // Import the UserSignup component
-import CaptainLogin from "../pages/CaptainLogin"; // Import the CaptainLogin component
-import CaptainSignup from "../pages/captainSignup";// Import the CaptainSignup component
-import { UserDataContext } from "../src/context/UserContext";
+import Home from '../pages/home';
+import Start from "../pages/Start";
+import UserLogin from "../pages/UserLogin";
+import UserSignup from "../pages/UserSignup";
+import CaptainLogin from "../pages/CaptainLogin";
+import CaptainSignup from "../pages/CaptainSignup"; // Fix casing
 import UserProtectWrapper from "../pages/UserProtectWrapper";
 import CaptainHome from "../pages/CaptainHome";
 import { CaptainProvider } from "../src/context/CaptainContext";
-import CaptainProtectWrapper from "../pages/CaptainProtectedWrapper";
-
+import CaptainProtectWrapper from "../pages/CaptainProtectWrapper";
+import Riding from "../pages/Riding";
+import CaptainRiding from "../pages/CaptainRiding";
+import 'leaflet/dist/leaflet.css';
 const App = () => {
- 
-  const ans = useContext(UserDataContext); // Use the UserDataContext
   return (
-    <UserDataContext.Provider value={ans}> {/* Ensure UserDataContext is provided */}
-      <CaptainProvider> {/* Wrap with CaptainProvider */}
-        <div>
-          <Routes>
-            <Route path="/" element={<Start />} /> {/* Use the Start component */}
-            <Route path="/UserLogin" element={<UserLogin />} /> {/* Use the UserLogin component */}
-            <Route path="/UserSignup" element={<UserSignup />} /> {/* Use the UserSignup component */}
-            <Route path="/captainLogin" element={<CaptainLogin />} /> {/* Use the CaptainLogin component */}
-            <Route path="/captainSignup" element={<CaptainSignup />} /> {/* Use the CaptainSignup component */}
-            <Route path="/Home" element={
-              <UserProtectWrapper>
-                <Home />
-              </UserProtectWrapper>
-            } /> {/* Use the Home component */}
-            <Route path="/captain-home" element={
-              <CaptainProtectWrapper>
-                <CaptainHome/>
-              </CaptainProtectWrapper>}/>
-          </Routes>
-        </div>
-      </CaptainProvider>
-    </UserDataContext.Provider>
+    <CaptainProvider> {/* Wrap with CaptainProvider */}
+      <div>
+        <Routes>
+          <Route path="/" element={<Start />} />
+          <Route path="/UserLogin" element={<UserLogin />} />
+          <Route path="/UserSignup" element={<UserSignup />} />
+          <Route path="/captainLogin" element={<CaptainLogin />} />
+          <Route path="/captainSignup" element={<CaptainSignup />} />
+          <Route path="/Riding" element={<Riding />} />
+          <Route path="/captains-riding" element={<CaptainRiding />} />
+          <Route path="/Home" element={
+            <UserProtectWrapper>
+              <Home />
+            </UserProtectWrapper>
+          } />
+          <Route path="/captain-home" element={
+            <CaptainProtectWrapper>
+              <CaptainHome />
+            </CaptainProtectWrapper>
+          } />
+        </Routes>
+      </div>
+    </CaptainProvider>
   );
 };
 

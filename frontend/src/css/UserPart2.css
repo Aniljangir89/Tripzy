@@ -1,33 +1,37 @@
-.Looking_container{
+.Looking_container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.waiting_driver_container{
+
+.waiting_driver_container {
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
 }
-.watching-for-driver{
+
+.watching-for-driver {
     position: absolute;
     height: 70vh;
     width: 100%;
     transform: translateY(0vh);
     z-index: 101;
 }
-.driver_img{
+
+.driver_img {
     width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
     padding: 0px 20px;
     justify-content: space-around;
-    box-shadow:0px 8px 14px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.75);
     margin-bottom: 10px;
 }
-.driver_info{
+
+.driver_info {
     height: 100%;
     width: 50%;
     display: flex;
@@ -35,40 +39,577 @@
     align-items: flex-end;
     justify-content: center;
     gap: 5px;
-  
+
 }
-.driver_info h2{
+
+.driver_info h2 {
     font-size: x-large;
     color: #000000cc;
     border-bottom: .5px solid black;
     font-style: italic;
-    
+
 }
-.driver_info h4{
+
+.driver_info h4 {
     color: #00000087;
 }
-.driver_info p{
+
+.driver_info p {
     font-size: small;
     color: #000000;
 
 }
 
-.message-to-driver{
+.message-to-driver {
     height: 100%;
     width: 80%;
     padding: 10px;
 
 }
-.m_for_driver{
+
+.m_for_driver {
     height: 20vh;
 }
-.send_to_driver{
+
+.send_to_driver {
     height: 100%;
     width: 20%;
     background-color: #15be15f5;
     color: rgba(255, 255, 255, 0.987);
     border: none;
 }
-.confirmation-info{
+
+.confirmation-info {
     margin-top: 40px;
+}
+
+.riding_container {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.riding_track {
+    height: 50%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.riding_track img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.riding_division {
+    height: 50%;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    background-color: white;
+
+}
+
+.confirm_payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.riding_to_home {
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+}
+
+.riding_to_home a {
+    font-size: xx-large;
+    text-decoration: none;
+    color: black;
+}
+
+.captain_home_container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.captians_map {
+    height: 60%;
+    width: 100%;
+    background-color: palevioletred;
+    position: relative;
+    z-index: 1;
+}
+
+.uber_radom_map {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.uber_logo_in_map {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+
+.captains_details {
+    height: 40%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.captains_name_in_home img {
+    height: 60px;
+    width: 63px;
+    border-radius: 50%;
+}
+
+.captains_name_in_home h4 {
+    font-size: large;
+    color: #000000cc;
+    border-bottom: .5px solid black;
+    font-style: italic;
+}
+
+.captains_earning_in_home h4 {
+    font-size: large;
+    color: #000000cc;
+
+}
+
+.name_with_earning {
+    height: 30%;
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.earning_with_time {
+    height: 40%;
+    width: 90%;
+    display: flex;
+    padding: 10px;
+    background-color: rgb(255 136 0 / 99%);
+    gap: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.captains_name_in_home {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.captains_earning_in_home {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.capatins_time,
+.captains_total_distance,
+.captains_note {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.captain_details_container2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ride_pop-up {
+    height: 50vh;
+    width: 100vw;
+    position: fixed;
+    bottom: -100vh;
+
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ride_pop_up_container {
+    height: 50vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.incoming_ride_request {
+    height: 22%;
+    width: 100%;
+    display: flex;
+
+    padding: 0px 20px;
+    border-bottom: 1px solid #00000047;
+}
+
+.cant_d img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.estimated_dist {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+
+}
+
+.name_of_rider {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px;
+
+}
+
+.name_of_rider h5 {
+    font-size: large;
+    color: #000000cc;
+    border-bottom: .5px solid black;
+    font-style: italic;
+}
+
+.name_of_rider p {
+    font-size: small;
+    color: #000000;
+    background-color: yellow;
+    border-radius: 4px;
+    padding: 2px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.estimated_dist h4 {
+    font-size: large;
+    color: #000000cc;
+
+}
+
+.estimated_dist p {
+    font-size: small;
+    color: #00000067;
+
+
+}
+
+.cant_a,
+.cant_b {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cant_a h4,
+.cant_b h4 {
+    font-size: large;
+    color: #000000cc;
+
+}
+
+.cant_a p,
+.cant_b p {
+    font-size: small;
+    color: #00000067;
+
+}
+
+.cant_c {
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.btn_c1 {
+    background-color: red;
+    color: rgba(255, 255, 255, 0.987);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn_c2 {
+    background-color: #15be15f5;
+    color: rgba(255, 255, 255, 0.987);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border:none;
+}
+
+.cant_d {
+    align-items: center;
+    justify-content: center;
+}
+
+.cant_e {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+
+}
+
+.cant_e h5 {
+    height: 3px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.315);
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.cant_e h4 {
+    font-size: x-large;
+    color: #000000cc;
+
+}
+
+.confirm_ride_pop_up {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    bottom: -100vh;
+    z-index: 11;
+
+}
+
+.confirm_ride_pop_up_container {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.captain_riding_container {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.captain_top_container {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+}
+
+.captain_bottom_container {
+    height: 30%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(234, 121, 8);
+    padding: 10px;
+}
+
+.remaining_dist_for_driver {
+    height: 95%;
+    width: 100%;
+    border: 1px solid black;
+    margin: 30px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.pop_up_for_remining {
+    height: 2.5%;
+    width: 25%;
+    background-color: #09090984;
+    border-radius: 2px;
+}
+
+.remaining_dist_for_driver a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: rgb(18, 211, 18);
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.remaining_dist_for_driver p {
+    font-size: x-large;
+}
+
+.rpop_1 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rpop_1 h5 {
+    height: 4px;
+    width: 30%;
+    background-color: black;
+    margin: 10px;
+    border-radius: 2px;
+}
+
+.rpop_1 h4 {
+    font-size: x-large;
+}
+
+.rpop_2 {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.rpop_3 {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    padding: 0px 40px;
+}
+
+.rpop_4 {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.rpop_2 img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.rpop_3 div {
+    height: 30%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.rpop_3 div h4 {
+    font-size: large;
+
+}
+
+.rpop_3 div p {
+    color: rgba(0, 0, 0, 0.498);
+}
+
+.rpop_4 form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+}
+
+.rpops_form input {
+    padding: 15px 20px;
+    border: none;
+    background-color: #0000000f;
+    border-radius: 5px;
+    font-weight:lighter;
+}
+.complete_ride_panel{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    background-color: rgba(102, 51, 153, 0.366);
+    transform: translateY(100%);
+}
+.finish_ride_container{
+    height: 100%;
+    width: 100%;
+}
+.rpop_4 a{
+    text-decoration: none;
+    background-color: green;
+    padding: 10px 40px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+}
+.rpop_4 p{
+    font-size: small;
+    margin: 40px;
+    color: rgba(0, 0, 0, 0.492);
 }

@@ -179,6 +179,8 @@
     .home_map12{
         width: 100%;
         height: 100vh;
+        position: relative;
+        z-index: 10;
        
     }
 .location_container{
@@ -213,7 +215,7 @@
     margin-bottom: 20px;
     font-weight: 600;
     border-bottom: 1px solid black;
-}
+} 
 .suggestions{
     height: 100vh;
     width: 100vw;
@@ -223,6 +225,7 @@
     justify-content: end;
     position: absolute;
     top: 0;
+    z-index: 10;
 }
 .select_suggestion{
     height: 70%;
@@ -231,7 +234,16 @@
     padding: 30px;
     display: none;
 }
-
+.pickup-suggestions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.destination-suggestions{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .Location_panel{
     height: 100%;
     width: 100%;
@@ -241,13 +253,13 @@
     overflow: hidden;
 }
 .near-location{
-    display: flex;
-    gap: 10px;
+    
+    
     padding: 20px;
     background-color: #0000000f;
     border-radius: 5px;
-    display: block;
-    
+    display: flex;
+    ;
     
 }
 .near-location:hover{ 
@@ -265,13 +277,16 @@
     border-radius: 5px;
 }
 .near-location h4{
-    font-size: medium;
+   width: 90%;
+    font-size: small;
     font-weight: 500;
-    display: inline-block;
     margin-left: 10px;
+    color: #000000;
+    
 }
 .near-location h2{
-    display: inline-block;
+  height: 100%;
+width: 10%;
 
 }
 .ride-options{
@@ -423,4 +438,20 @@
     background-color: white;
     transform: translateY(70vh);
     
+}
+.find_trip_button{
+    padding: 10px 20px;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    width: 50vw;
+    color: white;
+}
+.captains_time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
 }

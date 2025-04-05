@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ConfirmedVehicle = ({ setVehicleFound, setConfirmRidePanel }) => {
+const ConfirmedVehicle = ({ setVehicleFound, setConfirmRidePanel ,CreateRide,pickup,destination,fare}) => {
   return (
     <div className='confirmation_container'>
       <i className="ri-arrow-down-wide-line" onClick={() => {
@@ -13,27 +13,28 @@ const ConfirmedVehicle = ({ setVehicleFound, setConfirmRidePanel }) => {
           <div className="confirm-data">
             <i class="ri-map-pin-time-fill"></i>
             <div className="confirmation-data2">
-              <h3>565/A11</h3>
-              <p>1'st Flor bombay street</p>
+     
+              <p>{pickup}</p>
             </div>
           </div>
           <div className="confirm-data">
             <i class="ri-landscape-line"></i>
             <div className="confirmation-data2">
-              <h3>565/A11</h3>
-              <p>Sadar bazar,jaipur</p>
+      
+              <p>{destination}</p>
             </div>
           </div>
           <div className="confirm-data">
             <i class="ri-bank-card-2-fill"></i>
             <div className="confirmation-data2">
-              <h3>$19.79</h3>
+              <h3>{parseInt(fare)}</h3>
               <p>Cash/Online</p>
             </div>
           </div>
         </div>
         <button onClick={() => {
           setVehicleFound(true);
+          CreateRide(); // Call the function to create the ride
         }}>Confirm</button>
       </div>
     </div>

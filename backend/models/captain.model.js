@@ -25,7 +25,7 @@ const captainSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        select: false
+        select: false // Excluded by default from queries
     },
     socketId: {
         type: String
@@ -58,7 +58,7 @@ const captainSchema = new mongoose.Schema({
         }
     },
     location: {
-        lat: {
+        ltd: {
             type: Number,
         },
         lng: {
@@ -67,17 +67,20 @@ const captainSchema = new mongoose.Schema({
     }
 });
 
+// ✅ Generate Auth Token
 captainSchema.methods.generateAuthToken = function() {
     return jwt.sign({ _id: this._id }, process.env.JWT_SECRET, { expiresIn: '24h' });
 };
 
+// ✅ Compare Password
 captainSchema.methods.comparePassword = async function(enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
 
+// ✅ Hash Password before saving
 captainSchema.statics.hashPassword = async function(password) {
     return await bcrypt.hash(password, 10);
 };
 
-const captainModel = mongoose.model('Captain', captainSchema);
-module.exports = captainModel;
+const Captain = mongoose.model('captain', captainSchema);
+module.exports = Captain;

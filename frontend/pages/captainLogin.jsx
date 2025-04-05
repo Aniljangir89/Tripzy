@@ -6,25 +6,26 @@ import { CaptainContext } from '../src/context/CaptainContext';
 const CaptainLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { captain, setCaptain } = useContext(CaptainContext);
+  const { setCaptain } = useContext(CaptainContext);
   const navigate = useNavigate();
 
-  const submitHandler = async(e) => {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    const captain = {
-      email: email,
-      password: password
-    };
     try {
       console.log('Submitting form...');
-      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/captains/login`, captain);
+      const response = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/captains/login`,
+        { email, password }
+      );
+
       console.log('Response received:', response);
       if (response.status === 201 || response.status === 200) {
         const data = response.data;
         setCaptain(data.captain);
-        localStorage.setItem('token', data.token); // Ensure token is set in local storage
-        console.log(data.token);
-        navigate('/captain-home');
+        localStorage.setItem('captainToken', data.token); // ✅ Fix localStorage key
+        
+        console.log("Navigating to captain-home...");
+        navigate('/captain-home'); // ✅ Debugging added
       } else {
         console.error('Unexpected response status:', response.status);
       }

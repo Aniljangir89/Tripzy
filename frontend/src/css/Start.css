@@ -1,47 +1,91 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.text{
-    color: rgb(12, 112, 151);
-}
-.page1{
-  height: 100vh;
-  width:100vw;
-  background-color: rgb(148, 106, 106);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  background-image: url(https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_1380,w_1104/v1684852612/assets/ba/4947c1-b862-400e-9f00-668f4926a4a2/original/Ride-with-Uber.png);
-  background-size: cover;
-}
-.page1-content{
-   background-color: white;
-   padding: 25px 10px;
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.page1 img{
-    width: 20%;
-    height: 15%;
-    margin: 0px 15px;
-}
-.page1-content h1{
-    font-weight: bold;
-
-}
-.page1-content a{
-    background-color: black;
-    color: white;
-    padding: 10px 80px;
+/* Fullscreen container */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 3px;
-    margin-top: 10px;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  /* Background section */
+  .page1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://voltacabs.com/assets/img/Volta_Ride_Booking_App.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  /* Uber logo */
+  .page1 img {
+    width: 130px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+  }
+  
+  /* Content box */
+  .page1-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+   
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+  
+    position: absolute;
+    bottom: 0px;
+  }
+  
+  /* Heading */
+  .page1-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #000;
+  }
+  
+  /* Button */
+  .page1-content a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: black;
+    color: white;
     text-decoration: none;
-}
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 12px;
+  }
+  
+  .page1-content a:hover {
+    background-color: #333;
+  }
+  
+  /* 🔥 Mobile Fixes */
+  @media (max-width: 768px) {
+    .page1 {
+      background-size: contain; /* Ensures full image is visible */
+    }
+  
+    .page1-content {
+      width: 90%;
+      bottom: 0px;
+    }
+  
+    .page1-content h2 {
+      font-size: 18px;
+    }
+  
+    .page1-content a {
+      font-size: 14px;
+      padding: 10px 18px;
+    }
+  }
+  
