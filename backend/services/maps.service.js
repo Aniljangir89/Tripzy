@@ -58,15 +58,12 @@ module.exports.getSuggestions = async (query) => {
             throw new Error('Invalid query provided.');
         }
 
-        const response = await axios.get('https://nominatim.openstreetmap.org/search', {
+        const response = await axios.get(`https://us1.locationiq.com/v1/search.php`, {
             params: {
-                q: query, // User input for address
+                key: GOOGLE_MAPS_API,
+                q: address,
                 format: 'json',
-                addressdetails: 1,
-                limit: 5 // Limit suggestions to top 5 results
-            },
-            headers: {
-                'User-Agent': 'MyUberCloneApp/1.0 (aniljangid8991@gmail.com)'
+                limit: 1
             }
         });
 
