@@ -3,14 +3,12 @@ const captainModel = require('../models/captain.model'); // Import the captain m
 // Function to get coordinates from an address
 module.exports.getAddressCoordinates = async (address) => {
     try {
-        const response = await axios.get('https://nominatim.openstreetmap.org/search', {
+        const response = await axios.get('https://us1.locationiq.com/v1/search.php', {
             params: {
+                key: process.env.GOOGLE_MAPS_API, // ✅ Use a meaningful env variable name
                 q: address,
                 format: 'json',
                 limit: 1
-            },
-            headers: {
-                'User-Agent': 'MyUberCloneApp/1.0 (aniljangid8991@gmail.com)'
             }
         });
 
