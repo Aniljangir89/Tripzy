@@ -9,12 +9,17 @@ const connectTOdb = require('./db/db');
 connectTOdb();
 
 // CORS configuration
-const corsOptions = {
-  origin: 'http://localhost:5173',  // Allow requests only from your React app
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
-  credentials: true,  // Allow credentials (cookies, Authorization header)
-};
+io = new Server(server, {
+  cors: {
+    origin: [
+      'http://localhost:5173',
+      'https://uber-clone-sepia-nine.vercel.app'
+    ],
+    methods: ['GET', 'POST'],
+    credentials: true
+  }
+});
+
 
 app.use(cors(corsOptions));  // Use the configured CORS options
 
