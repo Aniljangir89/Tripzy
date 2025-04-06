@@ -39,10 +39,11 @@ const CaptainRiding = () => {
             <p>2.5Km</p>
             <a href="#">Complete Ride</a>
         </div>
-        <div ref={RideCompleteRef} className="complete_ride_panel">
+       
+      </div>
+      <div ref={RideCompleteRef} className="complete_ride_panel">
            <FinishRide setRideComplete={setRideComplete} ride={rideData}/>
         </div>
-      </div>
     </div>
   )
 }
