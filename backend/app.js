@@ -11,10 +11,10 @@ connectTOdb();
 // CORS configuration
 io = new Server(server, {
   cors: {
-    origin: [
-      'http://localhost:5173',
-      'https://uber-clone-sepia-nine.vercel.app'
-    ],
+    origin:
+     
+      'https://uber-clone-sepia-nine.vercel.app',
+    
     methods: ['GET', 'POST'],
     credentials: true
   }
