@@ -10,7 +10,7 @@ function initializeSocket(server) {
     cors: {
       origin: [
         "http://localhost:5173",
-        "https://uber-clone-sepia-nine.vercel.app/"
+        "https://uber-clone-sepia-nine.vercel.app"
       ],
       methods: ["GET", "POST"],
     },
