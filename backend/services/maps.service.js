@@ -60,10 +60,10 @@ module.exports.getSuggestions = async (query) => {
 
         const response = await axios.get(`https://us1.locationiq.com/v1/search.php`, {
             params: {
-                key: GOOGLE_MAPS_API,
-                q: address,
+                key: process.env.GOOGLE_MAPS_API,
+                q: query,
                 format: 'json',
-                limit: 1
+                limit: 5
             }
         });
 
