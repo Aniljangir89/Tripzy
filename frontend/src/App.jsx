@@ -8,7 +8,7 @@ import CaptainLogin from "../pages/CaptainLogin";
 import CaptainSignup from "../pages/CaptainSignup"; // Fix casing
 import UserProtectWrapper from "../pages/UserProtectWrapper";
 import CaptainHome from "../pages/CaptainHome";
-import { CaptainProvider } from "../src/context/CaptainContext";
+import { CaptainProvider } from "../context/CaptainContext";
 import CaptainProtectWrapper from "../pages/CaptainProtectWrapper";
 import Riding from "../pages/Riding";
 import CaptainRiding from "../pages/CaptainRiding";

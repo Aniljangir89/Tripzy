@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { CaptainContext } from '../src/context/CaptainContext';
+import { CaptainContext } from '../context/CaptainContext';
 
 const CaptainLogin = () => {
   const [email, setEmail] = useState('');

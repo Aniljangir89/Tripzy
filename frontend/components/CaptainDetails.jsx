@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { CaptainContext } from '../src/context/CaptainContext'; // Adjust the import path as necessary
+import { CaptainContext } from '../context/CaptainContext'; // Adjust the import path as necessary
 
 const CaptainDetails = () => {
   const { captain } = useContext(CaptainContext);

@@ -3,8 +3,8 @@ import { gsap } from 'gsap'; // Added gsap import
 import CaptainDetails from '../components/CaptainDetails';
 import RidePopUp from '../components/RidePopUp';
 import ConfirmRidePopUp from '../components/ConfirmRidePopUp';
-import {SocketContext} from '../src/context/SocketContext'; // Added import for SocketContext
-import { CaptainContext } from '../src/context/CaptainContext';
+import {SocketContext} from '../context/SocketContext'; // Added import for SocketContext
+import { CaptainContext } from '../context/CaptainContext';
 import axios from 'axios';
 import LiveTracking from '../components/LiveTracking';
 

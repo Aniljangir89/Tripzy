@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { useEffect,useContext } from 'react';
-import {SocketContext} from '../src/context/socketContext';
+import {SocketContext} from '../context/SocketContext';
 import { useNavigate } from 'react-router-dom';
 import LiveTracking from '../components/LiveTracking';
 
