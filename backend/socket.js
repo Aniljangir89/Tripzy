@@ -8,7 +8,7 @@ let connectedUsers = 0; // Track the number of connected users
 function initializeSocket(server) {
   io = new Server(server, {
     cors: {
-      origin: 'https://uber-clone-orvl-be6qaaxvv-aniljangir89s-projects.vercel.app',
+      origin: 'https://uber-clone-orvl-git-main-aniljangir89s-projects.vercel.app',
       methods: ["GET", "POST"],
     },
   });

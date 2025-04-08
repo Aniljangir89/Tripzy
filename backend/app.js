@@ -10,7 +10,7 @@ connectTOdb();
 
 // CORS configuration
 const corsOptions = {
-  origin: 'https://uber-clone-orvl-be6qaaxvv-aniljangir89s-projects.vercel.app', // Allow requests only from your React app
+  origin: 'https://uber-clone-orvl-git-main-aniljangir89s-projects.vercel.app', // Allow requests only from your React app
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'],  // Allowed headers
   credentials: true,  // Allow credentials (cookies, Authorization header)
