@@ -41,7 +41,7 @@ const RideFare = () => {
   return (
     <div className='fare_container'>
         <div className="p_to_d">
-          <img src="\src\assets\ChatGPT Image Apr 8, 2025, 07_31_00 PM.png" alt="" />
+          <img src="\ChatGPT Image Apr 8, 2025, 07_31_00 PM.png" alt="" />
         </div>
         <div className="location_dt">
         <div>
@@ -55,15 +55,15 @@ const RideFare = () => {
         </div>
         <div className="vehicles_type">
           <div>
-            <img src="\src\assets\auto.webp" alt="" />
+            <img src="\auto.webp" alt="" />
             <p> ₹{Math.round(fare?.fareDetails?.auto?.toFixed(2) )|| "N/A"}</p>
 
           </div>
-          <div><img src="\src\assets\car.webp" alt="" />
+          <div><img src="\car.webp" alt="" />
           <p> ₹{Math.round(fare?.fareDetails?.car?.toFixed(2)) || "N/A"}</p>
           </div>
           <div>
-            <img src="\src\assets\bike.webp" alt="" />
+            <img src="\bike.webp" alt="" />
             <p> ₹{Math.round(fare?.fareDetails?.motorcycle?.toFixed(2)) || "N/A"}</p>
           </div>
         </div>

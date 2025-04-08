@@ -2,16 +2,6 @@ import React, { useState } from 'react';
 import '../src/css/Start.css';
 import { useNavigate } from 'react-router-dom';
 
-// Image imports
-import tripImage from '../src/assets/10-1024x649.webp';
-import facebookIcon from '../src/assets/facebook.png';
-import twitterIcon from '../src/assets/twitter.png';
-import instagramIcon from '../src/assets/instagram.png';
-import youtubeIcon from '../src/assets/youtube.png';
-import linkedinIcon from '../src/assets/linkedin.png';
-import earthIcon from '../src/assets/earth.png';
-import locationIcon from '../src/assets/location.jpg';
-
 const Start = () => {
   const navigate = useNavigate();
   const [location, setLocation] = useState('');
@@ -37,13 +27,13 @@ const Start = () => {
         <div className="go_anywhare">
           <div className="heading">
             <h1>Go anywhere with us</h1>
-            <p>Request a ride, hop in, and go</p>
+            <p>Request a ride, hope in, and go</p>
           </div>
           <div className="prices_check">
             <form onSubmit={submithandlar}>
               <div className="location-container">
                 <div className="input-group">
-                  <svg className="icon" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
                     <circle cx="12" cy="12" r="3" />
                   </svg>
                   <input
@@ -52,15 +42,17 @@ const Start = () => {
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                   />
-                  <svg className="icon right-icon" viewBox="0 0 24 24" fill="black">
+                  <svg class="icon right-icon" viewBox="0 0 24 24" fill="black">
                     <path d="M2 12l19-10-4 10 4 10z" />
                   </svg>
                 </div>
                 <div className="vertical-line"></div>
                 <div className="input-group">
-                  <svg className="icon" viewBox="0 0 24 24" fill="black">
+                  <svg class="icon" viewBox="0 0 24 24" fill="black">
                     <rect x="9" y="9" width="6" height="6" />
                   </svg>
+
+
                   <input
                     type="text"
                     placeholder="Enter destination"
@@ -80,27 +72,27 @@ const Start = () => {
           <h1>Log in to see your trips</h1>
           <p>View past trips, tailored suggestions, support resources, and more.</p>
           <a className='sdgdfxcc' href="/UserLogin">Log in to your account</a>
-          <a className='sdadfdgd' href="/UserSignup">Don't have any account? Sign up</a>
+          <a className='sdadfdgd' href="/UserSignup">Don't have any account?, Sign up</a>
         </div>
         <div className="random_trip_img">
-          <img src={tripImage} alt="Trip preview" />
+          <img src="\10-1024x649.webp" alt="trip" />
         </div>
       </div>
 
       <div className="page4">
         <div className="socialmedia">
           <ul>
-            <li><a href="#"><img src={facebookIcon} alt="Facebook" /></a></li>
-            <li><a href="#"><img src={twitterIcon} alt="Twitter" /></a></li>
-            <li><a href="#"><img src={instagramIcon} alt="Instagram" /></a></li>
-            <li><a href="#"><img src={youtubeIcon} alt="YouTube" /></a></li>
-            <li><a href="#"><img src={linkedinIcon} alt="LinkedIn" /></a></li>
+            <li><a href=""><img src="\facebook.png" alt="" /></a></li>
+            <li><a href=""><img src="\twitter.png" alt="" /></a></li>
+            <li><a href=""><img src="\instagram.png" alt="" /></a></li>
+            <li><a href=""><img src="\youtube.png" alt="" /></a></li>
+            <li><a href=""><img src="\linkedin.png" alt="" /></a></li>
           </ul>
         </div>
         <div className="location_english">
           <ul>
-            <li><a href="#"><span><img alt="Earth" src={earthIcon} /></span>Location</a></li>
-            <li><a href="#"><span><img src={locationIcon} alt="Location icon" /></span>English</a></li>
+            <li><a href=""> <span><img alt="" src="\earth.png" /></span>Location</a></li>
+            <li><a href=""><span><img src="\location.jpg" alt="" /></span>English</a></li>
           </ul>
         </div>
         <div className="privacy_policy">
