@@ -38,7 +38,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    gap: 5px;
+    gap: 3px;
 
 }
 
@@ -55,7 +55,7 @@
 }
 
 .driver_info p {
-    font-size: small;
+    font-size: large;
     color: #000000;
 
 }
@@ -79,9 +79,7 @@
     border: none;
 }
 
-.confirmation-info {
-    margin-top: 40px;
-}
+
 
 .riding_container {
     height: 100vh;
@@ -612,4 +610,55 @@
     font-size: small;
     margin: 40px;
     color: rgba(0, 0, 0, 0.492);
+}
+.confirmation-data2{
+    display: flex;
+    align-items: center;
+    
+}
+.confirmation-data3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2px solid rgba(0, 0, 0, 0.094);
+    width: 70%;
+    height: 100%;
+    padding-left: 20px;
+}
+.confirmation-data3 p{
+    color: rgba(0, 0, 0, 0.322);
+}
+.otp_section{
+  width: 80%;
+  background-color:  rgba(11, 4, 18, 0.192);
+  height: 50px;
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.otp_section p{
+    font-size: large;
+    background-color: rgb(238, 234, 234);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.otp_information p{
+    font-size: small;
+    color: rgba(218, 17, 17, 0.889);
+    margin: 10px;
+}
+.confirmation-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

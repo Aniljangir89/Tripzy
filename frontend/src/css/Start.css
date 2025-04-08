@@ -1,91 +1,320 @@
-/* Fullscreen container */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-  }
+.container{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+.page1{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+
+}
+.page3{
+  height: 100vh;
+  width: 100vw;
   
-  /* Background section */
-  .page1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-image: url('https://voltacabs.com/assets/img/Volta_Ride_Booking_App.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-  }
+
+}
+.page1_header{
+  height: 10vh;
+  width: 100%;
+  padding: 0px 15px;
+  display: flex;
+  border-bottom: 2px solid rgba(120, 114, 114, 0.284);
+
+}
+.logo_img{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+.header_btn{
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: 'Poppins', sans-serif;
+
+}
+.logo_img h1{
+   color: white;
+}
+.header_btn a{
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  margin: 7px;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: small;
+ 
+}
+
+.go_anywhare{
+  height: 60vh;
+  width: 100%;
+  /* background-color: rgb(29, 18, 18); */
+
+}
+.heading{
+  height: 40%;
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
   
-  /* Uber logo */
-  .page1 img {
-    width: 130px;
-    height: auto;
-    position: absolute;
-    top: 20px;
-  }
+}
+.heading h1{
+  color: rgb(255, 255, 255);
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+.heading p{
+  color: rgb(255, 255, 255);
+  font-size: larger;
+  font-family: 'Poppins', sans-serif;
+}
+
+.prices_check{
+  height: 60%;
+  width: 100%;
   
-  /* Content box */
-  .page1-content {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-   
-    text-align: center;
-    width: 100%;
-    max-width: 350px;
+}
+
+.prices_check form{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 20px;
+ 
+}
+.prices_check form input{
+  height: 30px;
+  width: 90%;
+  border-radius: 10px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+}
+.prices_check form button{
+  height: 45px;
+  width: 30vw;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: white;
+  font-weight: bold;
+  color: black;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.input-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.input-group .right-icon {
+  margin-left: auto;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.vertical-line {
+  position: absolute;
+  top: 27px;
+  left: 17px;
+  height: 55px;
+  width: 1px;
+  background-color: rgb(19, 17, 17);
+  z-index: 10;
+}
+
+.log_in_to_see{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5vh;
+  padding: 50px 20px;
+}
+.log_in_to_see h1{
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 36px;
+  font-family: 'Poppins', sans-serif;
   
-    position: absolute;
-    bottom: 0px;
-  }
+}
+.log_in_to_see p{
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.sdgdfxcc{
+  height: 45px;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: black;
+  font-weight: bold;
+  color: rgb(231, 229, 229);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sdadfdgd{
+  width: fit-content;
+  text-decoration: none;
+  margin: 0px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+.random_trip_img{
+  height: 50%;
+  width: 100%;
+  padding: 20px;
+}
+.random_trip_img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.page4{
+  height: 70vh;
+  width: 100vw;
+  background-color: rgba(255, 251, 251, 0.224);
   
-  /* Heading */
-  .page1-content h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: #000;
-  }
+}
+.socialmedia{
+  height: 10vh;
+  width: 100%;
+  border-top: 1px solid rgba(120, 114, 114, 0.284);
+}
+.socialmedia ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  height: 100%;
+}
+.socialmedia ul li{
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: black;
+}
+.socialmedia ul li a img{
+
+  color: black;
+  height: 30px;
+  width: 30px;
+}
+.location_english{
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 10px 0px;
+  border-top: 1px solid rgba(120, 114, 114, 0.284);
+  justify-content: center;
+}
+.location_english img{
+  height: 20px;
+  width: 20px;
   
-  /* Button */
-  .page1-content a {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-top: 12px;
-  }
+}
+.location_english ul li{
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: black;
+  display: block;
+  padding: 3px 25px;
+}
+.location_english a{
+ text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: small;
   
-  .page1-content a:hover {
-    background-color: #333;
-  }
+}
+.privacy_policy{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 0px 25px;
   
-  /* 🔥 Mobile Fixes */
-  @media (max-width: 768px) {
-    .page1 {
-      background-size: contain; /* Ensures full image is visible */
-    }
-  
-    .page1-content {
-      width: 90%;
-      bottom: 0px;
-    }
-  
-    .page1-content h2 {
-      font-size: 18px;
-    }
-  
-    .page1-content a {
-      font-size: 14px;
-      padding: 10px 18px;
-    }
-  }
-  
+}
+.privacy_policy ul{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+  height: 100%;
+  width: 100%;
+
+}
+.privacy_policy ul li{
+  list-style: none;
+  font-size: small;
+}
+
+.privacy123{
+   display: flex;
+   align-items: end;
+   justify-content: center;
+   height: 20vh;
+   width: 100%;
+   font-family: 'Poppins', sans-serif;
+   font-size: smaller;
+}

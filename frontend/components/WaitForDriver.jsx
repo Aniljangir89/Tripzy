@@ -8,32 +8,33 @@ const WaitForDriver = (props) => {
       }}></i>
       <div className="confirmation-img">
         <div className="driver_img">
-          <img src="https://www.pngall.com/wp-content/uploads/2016/04/Happy-Person.png" alt="" />
+           <img src="\src\assets\3f9f5b8c9f31ce16c79d48b9eeda4de0.jpg" alt="" />
           <div className="driver_info">
             <h2>
-              {props.captainData?.captain?.fullname?.firstname ?? 'Default Firstname'}{' '}
-              {props.captainData?.captain?.fullname?.lastname ?? 'Default Lastname'}
+              {props.captainData?.captain?.fullname?.firstname ?? 'ram'}{' '}
+              {props.captainData?.captain?.fullname?.lastname ?? 'singh'}
             </h2>
-
-
-            <h4>  {props.captainData?.captain?.vehicle?.plate ?? 'Default Lastname'}</h4>
-            <p>   {props.captainData?.captain?.vehicle?.vehicleType ?? 'Default Lastname'}</p>
-            <p>{props.otp}</p>
+            <h4>  {props.captainData?.captain?.vehicle?.plate ?? 'RJ 07 CE 004'}</h4>
+            <p>   {props.captainData?.captain?.vehicle?.vehicleType ?? 'car'}</p>
+         
           </div>
         </div>
         <div className="confirmation-info">
+          <div className="otp_information">
+          <p>OTP is provided don't share with anyone before ride start</p>
+          </div>
           <div className="confirm-data">
             <i class="ri-map-pin-time-fill"></i>
             <div className="confirmation-data2">
-              <h3>565/A11</h3>
-              <p>  {props.captainData?.pickup ?? 'Default Lastname'}</p>
+              
+              <p>  {props.captainData?.pickup ?? 'delhi'}</p>
             </div>
           </div>
 
           <div className="confirm-data">
             <i class="ri-bank-card-2-fill"></i>
-            <div className="confirmation-data2">
-              <h3>  {props.captainData?.fare ?? 'Default Lastname'}</h3>
+            <div className="confirmation-data3">
+              <h3>  ₹{props.captainData?.fare ?? '299'}</h3>
               <p>Cash/Online</p>
             </div>
           </div>
@@ -41,6 +42,9 @@ const WaitForDriver = (props) => {
             <input type="text" className='message-to-driver' placeholder='Send Message' />
             <input type="button" value="Send" className='send_to_driver' />
           </div>
+        </div>
+        <div className="otp_section">
+            <p>{props.otp ??'X X X X X X' } </p>
         </div>
       </div>
     </div>

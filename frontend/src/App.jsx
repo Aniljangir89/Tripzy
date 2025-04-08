@@ -13,12 +13,16 @@ import CaptainProtectWrapper from "../pages/CaptainProtectWrapper";
 import Riding from "../pages/Riding";
 import CaptainRiding from "../pages/CaptainRiding";
 import 'leaflet/dist/leaflet.css';
+import RideFare from "../pages/RideFare";
+
+
 const App = () => {
   return (
     <CaptainProvider> {/* Wrap with CaptainProvider */}
       <div>
         <Routes>
           <Route path="/" element={<Start />} />
+          <Route path="/RideFare" element={<RideFare />} />
           <Route path="/UserLogin" element={<UserLogin />} />
           <Route path="/UserSignup" element={<UserSignup />} />
           <Route path="/captainLogin" element={<CaptainLogin />} />

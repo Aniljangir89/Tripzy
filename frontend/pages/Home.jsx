@@ -31,36 +31,36 @@ const Home = () => {
   const [confirmRidePanel, setConfirmRidePanel] = useState(false);
   const [vehicleFound, setVehicleFound] = useState(false);
   const [waitingForDriver, setWaitingForDriver] = useState(false);
-  const [fare, setFare] = useState({});  
+  const [fare, setFare] = useState({});
   const [vehicleType, setVehicleType] = useState(null); // State to store selected vehicle type
   const [captainData, setCaptainData] = useState(null); // State to store captain data
   const [otp, setOtp] = useState(null); // State to store OTP
 
   const submitHandler = (e) => e.preventDefault();
-   const {user}=useContext(UserDataContext); // Use the UserDataContext to get user data
-   const {socket} = useContext(SocketContext); // Use the SocketContext to get socket instance
-   const navigate = useNavigate(); // Use useNavigate for navigation
+  const { user } = useContext(UserDataContext); // Use the UserDataContext to get user data
+  const { socket } = useContext(SocketContext); // Use the SocketContext to get socket instance
+  const navigate = useNavigate(); // Use useNavigate for navigation
 
-   useEffect(() => {
+  useEffect(() => {
     if (!socket || !user || !user._id) return;
-  
+
     const joinUser = () => {
       console.log("📢 Emitting 'join' with userId:", user._id);
       socket.emit('join', { userType: 'user', userId: user._id });
     };
-  
+
     if (socket.connected) {
       joinUser(); // emit immediately if already connected
     } else {
       socket.on('connect', joinUser); // emit on future connection
     }
-  
+
     return () => {
       socket.off('connect', joinUser); // cleanup
     };
   }, [socket, user]);
   // Ensure dependencies are correct
-  
+
 
   useEffect(() => {
     if (vehiclepanel) {
@@ -104,88 +104,88 @@ const Home = () => {
 
 
   async function FindTrip() {
-  try {
-    setPanelOpen(false);
-    setVehiclePanel(true);
+    try {
+      setPanelOpen(false);
+      setVehiclePanel(true);
 
-    // Ensure pickup and destination are provided
-    if (!pickup || !destination) {
-      console.error("Pickup and destination must be set before fetching fare.");
-      return;
-    }
-
-    const response = await axios.get(
-      `${import.meta.env.VITE_BASE_URL}/rides/get-fare`, 
-      {
-        params: {
-          pickup: pickup,  // Ensure these match your backend expectations
-          destination: destination,
-        },
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
-        },
+      // Ensure pickup and destination are provided
+      if (!pickup || !destination) {
+        console.error("Pickup and destination must be set before fetching fare.");
+        return;
       }
-    );
-   const {fareDetails} = response.data; // Destructure fare details from response
-    console.log("Fare Response:", fareDetails); // Log the fare details
-    setFare(fareDetails);  // Store fare data in state
 
-  } catch (error) {
-    console.error("Error fetching fare:", error.response ? error.response.data : error.message);
-  }
-}
+      const response = await axios.get(
+        `${import.meta.env.VITE_BASE_URL}/rides/get-fare`,
+        {
+          params: {
+            pickup: pickup,  // Ensure these match your backend expectations
+            destination: destination,
+          },
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        }
+      );
+      const { fareDetails } = response.data; // Destructure fare details from response
+      console.log("Fare Response:", fareDetails); // Log the fare details
+      setFare(fareDetails);  // Store fare data in state
 
-
-async function CreateRide() {
-  try {
-    if (!pickup || !destination) {
-      console.error("Pickup and destination must be set before creating a ride.");
-      return;
+    } catch (error) {
+      console.error("Error fetching fare:", error.response ? error.response.data : error.message);
     }
+  }
 
-    const response = await axios.post(
-      `${import.meta.env.VITE_BASE_URL}/rides/create`,
-      {
-        pickup,
-        destination,
-        vehicleType,
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
-        },
+
+  async function CreateRide() {
+    try {
+      if (!pickup || !destination) {
+        console.error("Pickup and destination must be set before creating a ride.");
+        return;
       }
-    );
 
-    const ride = response.data; // No need to do `response.data.ride` if backend is directly sending ride object
+      const response = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/rides/create`,
+        {
+          pickup,
+          destination,
+          vehicleType,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        }
+      );
 
-    console.log("Ride Created:", ride);
+      const ride = response.data; // No need to do `response.data.ride` if backend is directly sending ride object
 
-    if (ride.otp) {
-      setOtp(ride.otp); // ✅ Store OTP in state
-    } else {
-      console.warn("No OTP received with ride data.");
+      console.log("Ride Created:", ride);
+
+      if (ride.otp) {
+        setOtp(ride.otp); // ✅ Store OTP in state
+      } else {
+        console.warn("No OTP received with ride data.");
+      }
+
+    } catch (error) {
+      console.error("Error creating ride:", error.response ? error.response.data : error.message);
     }
-
-  } catch (error) {
-    console.error("Error creating ride:", error.response ? error.response.data : error.message);
   }
-}
 
 
-socket.on('ride-confirmed', (data) => {
-  console.log("🚗 Ride confirmed:", data);
-  setCaptainData(data); // Assuming you have a state to store captain data
-  setWaitingForDriver(true); // Show the waiting for driver panel
-});
+  socket.on('ride-confirmed', (data) => {
+    console.log("🚗 Ride confirmed:", data);
+    setCaptainData(data); // Assuming you have a state to store captain data
+    setWaitingForDriver(true); // Show the waiting for driver panel
+  });
 
 
 
 
-socket.on('ride-started', (data) => {
-   setWaitingForDriver(false); // Hide the waiting for driver panel
-   navigate('/riding',{state:{ride:data}}); // Navigate to the riding page with ride data
-});
+  socket.on('ride-started', (data) => {
+    setWaitingForDriver(false); // Hide the waiting for driver panel
+    navigate('/riding', { state: { ride: data } }); // Navigate to the riding page with ride data
+  });
 
 
 
@@ -200,10 +200,10 @@ socket.on('ride-started', (data) => {
 
 
   return (
-    <div>
+    <div >
       <img className="home_logo" src="https://brandeps.com/logo-download/U/Uber-logo-vector-02.svg" alt="Uber Logo" />
       <div className="home_map12">
-       <LiveTracking/>
+        <LiveTracking />
       </div>
       <div className="suggestions">
         <div className="location_container">
@@ -235,10 +235,10 @@ socket.on('ride-started', (data) => {
               onClick={() => setPanelOpen(true)}
             />
           </form>
-          <button onClick={()=>{
+          <button onClick={() => {
             FindTrip();
-           
-          }}  className='find_trip_button'>Find Trip</button>
+
+          }} className='find_trip_button'>Find Trip</button>
         </div>
 
         <div className="select_suggestion" ref={panelRef}>
@@ -274,17 +274,17 @@ socket.on('ride-started', (data) => {
         </div>
 
         <div ref={vehiclepanelRef} className="ride-options">
-          <VehiclePanel  setConfirmRidePanel={setConfirmRidePanel} setVehiclePanel={setVehiclePanel} fare={fare} setVehicleType={setVehicleType} />
+          <VehiclePanel setConfirmRidePanel={setConfirmRidePanel} setVehiclePanel={setVehiclePanel} fare={fare} setVehicleType={setVehicleType} />
         </div>
 
         <div ref={confirmRiderPanelRef} className="confirmations">
-          <ConfirmedVehicle confirmRidePanel={confirmRidePanel} setVehicleFound={setVehicleFound} setConfirmRidePanel={setConfirmRidePanel} CreateRide={CreateRide} pickup={pickup} destination={destination}  fare={vehicleType ? fare[vehicleType] : 0} />
+          <ConfirmedVehicle confirmRidePanel={confirmRidePanel} setVehicleFound={setVehicleFound} setConfirmRidePanel={setConfirmRidePanel} CreateRide={CreateRide} pickup={pickup} destination={destination} fare={vehicleType ? fare[vehicleType] : 0} />
         </div>
         <div ref={vehicleFoundRef} className="confirmation-forWaiting">
-          <LookingForDriver setVehicleFound={setVehicleFound}   CreateRide={CreateRide} pickup={pickup} destination={destination} fare={fare[vehicleType]}  />
+          <LookingForDriver setVehicleFound={setVehicleFound} CreateRide={CreateRide} pickup={pickup} destination={destination} fare={fare[vehicleType]} />
         </div>
         <div ref={WaitingForDriverRef} className="watching-for-driver">
-          <WaitForDriver setWaitingForDriver={setWaitingForDriver} captainData={captainData} otp={otp}/>
+          <WaitForDriver setWaitingForDriver={setWaitingForDriver} captainData={captainData} otp={otp} />
         </div>
       </div>
     </div>

@@ -72,7 +72,7 @@ const LocationSearchPanel = ({
                     onClick={() => {
                       setPickup(suggestion.label);
                      
-                      setPanelOpen(false);
+                      
                     }}
                     className="near-location"
                     aria-label="Select this pickup location"
@@ -93,7 +93,7 @@ const LocationSearchPanel = ({
                     onClick={() => {
                       setDestination(suggestion.label);
                
-                      setPanelOpen(false);
+                  
                     }}
                     className="near-location"
                     aria-label="Select this destination location"
