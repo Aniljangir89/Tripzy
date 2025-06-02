@@ -41,7 +41,7 @@ const RideFare = () => {
   return (
     <div className='fare_container'>
         <div className="p_to_d">
-          <img src="\ChatGPT Image Apr 8, 2025, 07_31_00 PM.png" alt="" />
+         
         </div>
         <div className="location_dt">
         <div>
@@ -70,11 +70,11 @@ const RideFare = () => {
         <div className="location_dt">
         <div>
           <h4>Distance:</h4>
-          <p> {Math.round(fare?.distance?.toFixed(2) )|| "N/A"}</p>
+          <p> {Math.round(fare?.distance?.toFixed(2) )|| "N/A "}{" M"}</p>
         </div>
         <div>
           <h4>Duration:</h4>
-          <p> {Math.round(fare?.duration.toFixed(2) )|| "N/A"}</p>
+          <p> ₹{Math.round(fare?.duration.toFixed(2) )|| "N/A"}</p>
         </div>
         </div>
     </div>
