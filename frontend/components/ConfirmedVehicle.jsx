@@ -27,7 +27,8 @@ const ConfirmedVehicle = ({ setVehicleFound, setConfirmRidePanel ,CreateRide,pic
           <div className="confirm-data">
             <i class="ri-bank-card-2-fill"></i>
             <div className="confirmation-data2">
-              <h3>{parseInt(fare)}</h3>
+             <h3>{'\u20B9'}{parseInt(fare)}</h3>
+
               <p>Cash/Online</p>
             </div>
           </div>

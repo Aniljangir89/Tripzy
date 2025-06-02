@@ -31,10 +31,6 @@ function Riding() {
 
   console.log("🛣️ Captain - ride data:", ride);
 
-
-
-
-
   if (!ride) {
     return <div>Loading ride details...</div>;
   }

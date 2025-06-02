@@ -28,9 +28,16 @@
     font-weight: 500;
 }
 
-.Login-page img {
-    height: 10%;
-    width: 17%;
+.Login-page h1{
+        font-size: 2.5rem;
+    margin: 20px 0px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid;
+    padding: 10px;
+    color: #070768;
 }
 
 .Login-page button {
@@ -59,7 +66,21 @@
     margin-top: 10px;
     /* Add margin-top to match the spacing */
 }
-
+@media (min-width: 768px) {
+    .Login-page{
+        width: 35%;
+        padding: 20px;
+    }
+    .page2{
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+   
+    
+}
 .captain a {
     display: block;
     /* Make the anchor element a block-level element */
@@ -78,7 +99,7 @@
 .page2 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
     padding: 30px;
 }
 
@@ -223,6 +244,7 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+
     position: absolute;
     top: 0;
     z-index: 10;
@@ -325,6 +347,7 @@ width: 10%;
 .rider-info h4{
     font-size: small;
 }
+
 .rider-info h5{
     font-weight: 400;
     color: #0000009c;
@@ -454,4 +477,45 @@ width: 10%;
     align-items: center;
     justify-content: center;
     gap:5px;
+}
+@media (min-width: 768px) {
+    .suggestions{
+        
+        align-items: center;
+    }
+    .location_container{
+        width: 50%;
+        height: 28%;
+    }
+    .Location_panel{
+        align-items: center;
+    }
+    .locations{
+        width: 85%;
+    }
+    .small_ride_option{
+        width: 50%;
+    }
+    .ride-options{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .confirmation_container{
+        width: 50%;
+    }
+    .confirmations{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .confirmation-forWaiting{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+.confirmation-data2 h3{
+    margin-right: 20px;
 }

@@ -47,7 +47,7 @@ const UserSignup = () => {
   return (
     <div className="page2">
       <div className='Login-page'>
-        <img src="https://brandeps.com/logo-download/U/Uber-logo-vector-02.svg" alt="#" />
+        <h1>Trizpy</h1>
         <form onSubmit={submitHandler}>
           <h3>What's your Name</h3>
           <div className='name'>

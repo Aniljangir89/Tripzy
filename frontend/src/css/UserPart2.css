@@ -276,7 +276,11 @@
     padding: 0px 20px;
     border-bottom: 1px solid #00000047;
 }
-
+@media (max-width:760) {
+    .Looking_container{
+        width: 50%;
+    }
+}
 .cant_d img {
     height: 60px;
     width: 60px;
@@ -661,4 +665,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+@media (min-width: 768px) {
+    .Looking_container{
+        width: 50%;
+    }
 }

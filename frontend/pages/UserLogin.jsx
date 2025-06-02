@@ -27,7 +27,6 @@ const UserLogin = () => {
         setUser(data.user);
         localStorage.setItem('token', data.token);
         navigate('/home');
-
       } else {
         console.error('Unexpected response status:', response.status);
       }
@@ -42,9 +41,9 @@ const UserLogin = () => {
   return (
     <div className="page2">
       <div className='Login-page'>
-        <img src="https://brandeps.com/logo-download/U/Uber-logo-vector-02.svg" alt="#" />
+        <h1>Trizpy</h1>
         <form onSubmit={submitHandler}>
-          <h3>What's your E-mail</h3>
+          <h3>Enter user's E-mail</h3>
           <input
             className='email'
             type="email"

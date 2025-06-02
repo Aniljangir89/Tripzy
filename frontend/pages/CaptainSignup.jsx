@@ -12,7 +12,7 @@ const CaptainSignup = () => {
   const [vehicleType, setVehicleType] = useState('');
   const [vehiclePlate, setVehiclePlate] = useState('');
   const [vehicleColor, setVehicleColor] = useState('');
-  
+
   const { setCaptain } = useContext(CaptainContext);
   const navigate = useNavigate();
 
@@ -74,8 +74,8 @@ const CaptainSignup = () => {
   return (
     <div className="page2">
       <div className='Login-page'>
-        <img src="https://brandeps.com/logo-download/U/Uber-logo-vector-02.svg" alt="Uber Logo" />
-        <form onSubmit={submitHandler}>
+        <h1>Trizpy</h1>    
+            <form onSubmit={submitHandler}>
           <h3>What's your Name</h3>
           <div className='name'>
             <input
@@ -156,7 +156,7 @@ const CaptainSignup = () => {
           </div>
           <button>Create Account</button>
         </form>
-        <p className='create'>Already have an account? <Link to="/captain-login">Login here</Link></p>
+        <p className='create'>Already have an account? <Link to="/CaptainLogin">Login here</Link></p>
       </div>
       <div className='policy'>
         <p>This site is protected by reCAPTCHA and the <span>Google Privacy Policy</span>
@@ -167,4 +167,3 @@ const CaptainSignup = () => {
 }
 
 export default CaptainSignup;
- 

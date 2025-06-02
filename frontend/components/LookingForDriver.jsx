@@ -25,7 +25,7 @@ const LookingForDriver = (props) => {
         <div className="confirm-data">
         <i class="ri-bank-card-2-fill"></i>
         <div className="confirmation-data2">
-        <h3>{parseInt(props.fare)}</h3>
+        <h3>{'\u20B9'}{parseInt(props.fare)}</h3>
             <p>Cash/Online</p>
           </div>
         </div>
