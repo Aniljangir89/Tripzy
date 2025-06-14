@@ -70,11 +70,11 @@ const RideFare = () => {
         <div className="location_dt">
         <div>
           <h4>Distance:</h4>
-          <p> {Math.round(fare?.distance?.toFixed(2) )|| "N/A "}{" M"}</p>
+          <p> {Math.round(fare?.distance?.toFixed(2) )|| "N/A "}{" KM"}</p>
         </div>
         <div>
           <h4>Duration:</h4>
-          <p> ₹{Math.round(fare?.duration.toFixed(2) )|| "N/A"}</p>
+          <p> {fare?.duration !== undefined ? `${(fare.duration / 60).toFixed(2)} hr` : "N/A"}</p>
         </div>
         </div>
     </div>
